@@ -21,3 +21,13 @@ void imprimir_laberinto() {
         printf("\n");
     }
 }
+
+//comprobara movimientos 
+int comprobar_movimiento(int fila, int columna, int* movimientos) {
+    if (es_movimiento_valido(fila, columna)) {
+        (*movimientos)++;
+        return 1; // Movimiento válido
+    } else {
+        return 0; // Movimiento inválido
+    }
+}
